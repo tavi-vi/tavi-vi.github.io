@@ -5,22 +5,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
 			.center { text-align: center; }
+			.center-in-parent {
+				margin-left: 50%;
+				transform: translateX(-50%);
+			}
 			#content {
 				max-width: 50em;
 				padding-left: .7em;
 				padding-right: .7em;
 			}
 			.warning {
-				border: black;
-				background: red;
+				border-color: black;
 				border-width: 1px;
+				border-style: solid;
+				background: red;
 			}
 		</style>
 	</head>
 	<body>
 		<!-- Hello you fucking nerd. I wrote this by hand. -->
-		<img style="margin-left: 50%;transform: translateX(-50%);" src="construction.gif">
-		<p class="center warning">Please be patient, this site is under construction</p>
+		<img class="center-in-parent" src="construction.gif">
+		<p class="center-in-parent warning" style="width: fit-content; padding: 0.3em;">Please be patient, this site is under construction</p>
 		<div id="content">
 			<p>Hi, I'm Tavi. I have opinions and I touch computers.</p>
 			<p>My hobbies include:</p>
