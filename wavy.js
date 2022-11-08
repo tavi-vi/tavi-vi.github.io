@@ -4,6 +4,11 @@ window.onload = function() {
   Array.prototype.forEach.call(elements, function(element){
 
     let text = element.textContent;
+    element.ariaHidden = true;
+    alt = document.createElement('em');
+    alt.textContent = text;
+    alt.classList.add("screen-reader-only");
+    element.insertAdjacentElement('afterend', alt);
 
     element.innerHTML = text.split("")
       .map(letter => `<span class="">` + letter + `</span>`)
@@ -17,7 +22,7 @@ window.onload = function() {
       if (lastDelay<0 || lastOffset<0) {
         delay = 0;
       } else if(span.offsetLeft>lastOffset) {
-        delay = lastDelay + (span.offsetLeft - lastOffset)/200;
+        delay = lastDelay + (span.offsetLeft - lastOffset)/(11.7*span.offsetHeight);
       } else {
         delay = lastDelay + linebreakDelay;
       }
