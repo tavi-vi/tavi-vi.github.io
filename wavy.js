@@ -10,11 +10,17 @@ window.onload = function() {
     alt.classList.add("screen-reader-only");
     element.insertAdjacentElement('afterend', alt);
 
-    element.innerHTML = text.split("")
-      .map(letter => `<span class="">` + letter + `</span>`)
-      .join("");
+    while (element.firstChild) {
+      element.removeChild(element.lastChild);
+    }
 
-    var linebreakDelay = 0.05;
+    for(c of text) {
+      let runeSpan = document.createElement('span');
+      runeSpan.textContent = c;
+      element.appendChild(runeSpan);
+    }
+
+    var linebreakDelay = 0.04;
         lastDelay = -1,
         lastOffset = -1;
     Array.from(element.children).forEach((span, index) => {
