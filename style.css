@@ -1,0 +1,19 @@
+#normal-body {
+	background: url("/diamond-background.jpg");
+}
+.center { text-align: center; }
+.center-in-parent {
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+#content {
+	max-width: 50em;
+	padding-left: .7em;
+	padding-right: .7em;
+}
+.warning {
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	background: pink;
+}

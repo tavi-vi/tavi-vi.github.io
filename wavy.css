@@ -1,0 +1,59 @@
+.wavy-animation {
+  animation-name: wavy;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@keyframes wavy {
+  0.000000% {
+    top: 0.000000em;
+  }
+  6.250000% {
+    top: 0.038268em;
+  }
+  12.500000% {
+    top: 0.070711em;
+  }
+  18.750000% {
+    top: 0.092388em;
+  }
+  25.000000% {
+    top: 0.100000em;
+  }
+  31.250000% {
+    top: 0.092388em;
+  }
+  37.500000% {
+    top: 0.070711em;
+  }
+  43.750000% {
+    top: 0.038268em;
+  }
+  50.000000% {
+    top: 0.000000em;
+  }
+  56.250000% {
+    top: -0.038268em;
+  }
+  62.500000% {
+    top: -0.070711em;
+  }
+  68.750000% {
+    top: -0.092388em;
+  }
+  75.000000% {
+    top: -0.100000em;
+  }
+  81.250000% {
+    top: -0.092388em;
+  }
+  87.500000% {
+    top: -0.070711em;
+  }
+  93.750000% {
+    top: -0.038268em;
+  }
+}
