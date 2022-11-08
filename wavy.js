@@ -23,17 +23,20 @@ window.onload = function() {
     var linebreakDelay = 0.04;
         lastDelay = -1,
         lastOffset = -1;
+	lastCenter = -1;
     Array.from(element.children).forEach((span, index) => {
       span.classList.add("wavy-animation");
-      if (lastDelay<0 || lastOffset<0) {
+      center = span.offsetLeft+span.offsetWidth/2;
+      if (lastDelay<0 || lastOffset<0 || lastCenter<0) {
         delay = 0;
       } else if(span.offsetLeft>lastOffset) {
-        delay = lastDelay + (span.offsetLeft - lastOffset)/(11.7*span.offsetHeight);
+        delay = lastDelay + (center - lastCenter)/(11.5*span.offsetHeight);
       } else {
         delay = lastDelay + linebreakDelay;
       }
-      lastDelay = delay
-      lastOffset = span.offsetLeft
+      lastDelay = delay;
+      lastOffset = span.offsetLeft;
+      lastCenter = center;
 
       span.style.cssText = "animation-delay: " + delay + "s;";
     });
