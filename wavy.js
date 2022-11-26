@@ -8,6 +8,7 @@ window.onload = function() {
     alt = document.createElement('em');
     alt.textContent = text;
     alt.classList.add("screen-reader-only");
+    alt.classList.add("no-select");
     element.insertAdjacentElement('afterend', alt);
 
     while (element.firstChild) {
